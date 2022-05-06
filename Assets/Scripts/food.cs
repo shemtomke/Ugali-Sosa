@@ -6,7 +6,8 @@ public class food : MonoBehaviour
 {
     //array of foods
     public GameObject[] foods;
-    public float minValueX, maxValueX, yBound;
+    public float minValueX, maxValueX, yBound, timeForTutorial;
+
 
     //distance between 
 
@@ -17,7 +18,6 @@ public class food : MonoBehaviour
     void Start()
     {
         StartCoroutine(FallingFood());
-
     }
 
     // Update is called once per frame
@@ -49,7 +49,6 @@ public class food : MonoBehaviour
 
         }*/
         
-
         StartCoroutine(FallingFood());
     }
 }
