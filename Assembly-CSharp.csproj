@@ -59,8 +59,10 @@
     <Compile Include="Assets\Scripts\player.cs" />
     <Compile Include="Assets\Scripts\gameManager.cs" />
     <Compile Include="Assets\Scripts\food.cs" />
+    <Compile Include="Assets\Scripts\Level Manager Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\foodDestroy.cs" />
     <Compile Include="Assets\Scripts\menuManager.cs" />
+    <Compile Include="Assets\Scripts\Level Manager Scripts\player_Level.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
