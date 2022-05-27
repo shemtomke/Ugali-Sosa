@@ -6,18 +6,36 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    public Button[] levelButtons;
+    public Button l1, l2, l3, l4, l5;
+    public int level = 1;
 
     private void Start()
     {
-        int levelAt = PlayerPrefs.GetInt("levels", 1);
+        l1.interactable = true; //default
+        l2.interactable = false;
+        l3.interactable = false;
+        l4.interactable = false;
+        l5.interactable = false;
 
-        for (int i = 0; i < levelButtons.Length; i++)
+        level = PlayerPrefs.GetInt("LVL", 1);
+
+        switch (level)
         {
-            if(i + 2 > levelAt)
-            {
-                levelButtons[i].interactable = false;
-            }
+            case 1:
+                l1.interactable = true;
+                break;
+            case 2:
+                l2.interactable = true;
+                break;
+            case 3:
+                l3.interactable = true;
+                break;
+            case 4:
+                l4.interactable = true;
+                break;
+            case 5:
+                l5.interactable = true;
+                break;
         }
     }
     //load levels
@@ -45,6 +63,6 @@ public class LevelManager : MonoBehaviour
     //rest levels to 1
     public void resetLvls()
     {
-        PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteKey("LVL");
     }
 }

@@ -3249,12 +3249,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc215c6252423e244bf93d19de3b966e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelButtons:
-  - {fileID: 1086362585}
-  - {fileID: 1139875074}
-  - {fileID: 1132094980}
-  - {fileID: 1463765138}
-  - {fileID: 124522967}
+  l1: {fileID: 1086362585}
+  l2: {fileID: 1139875074}
+  l3: {fileID: 1132094980}
+  l4: {fileID: 1463765138}
+  l5: {fileID: 124522967}
+  level: 1
 --- !u!1 &1085545010
 GameObject:
   m_ObjectHideFlags: 0
