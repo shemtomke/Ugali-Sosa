@@ -33,9 +33,9 @@ public class MoveToNextScene : MonoBehaviour
         {
             SceneManager.LoadScene(nextSceneLoad);
 
-            if(nextSceneLoad > PlayerPrefs.GetInt("level"))
+            if(nextSceneLoad > PlayerPrefs.GetInt("levels"))
             {
-                PlayerPrefs.SetInt("level", nextSceneLoad);
+                PlayerPrefs.SetInt("levels", nextSceneLoad);
             }
         }
     }

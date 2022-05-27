@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        int levelAt = PlayerPrefs.GetInt("level", 1);
+        int levelAt = PlayerPrefs.GetInt("levels", 1);
 
         for (int i = 0; i < levelButtons.Length; i++)
         {
