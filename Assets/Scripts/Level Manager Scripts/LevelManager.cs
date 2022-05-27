@@ -6,112 +6,45 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    public player player;
-    public food food;
+    public Button[] levelButtons;
 
-    public bool gameIsPaused;
-    public GameObject GameOverScreen;
-    public GameObject WinScreen;
-    public GameObject pauseGameObject;
-
-    public Text scoretxt;
-    //reach this score to proceed to next level
-    public Text TargetScoreTxt;
-
-    public int TargetScore;
-    public int score = 1;
-
-    public Slider slider;
-
-    private void Awake()
+    private void Start()
     {
-        score = PlayerPrefs.GetInt("score", 20);
+        int levelAt = PlayerPrefs.GetInt("level", 1);
 
-        slider.maxValue = score;
-        scoretxt.text = "" + score;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        Time.timeScale = 1;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        GameOver();
-        WinGame();
-
-        slider.value = score;
-
-        //target to unlock new level
-        scoretxt.text = "SCORE" + " " + score;
-    }
-
-    public void GameOver()
-    {
-        if (player.isGameOver)
+        for (int i = 0; i < levelButtons.Length; i++)
         {
-            pauseGameObject.SetActive(false);
-            //show gameover screen
-            GameOverScreen.SetActive(true);
-            //stop food from falling
-
-
-            player.isMove = false;
-            Time.timeScale = 0;
+            if(i + 2 > levelAt)
+            {
+                levelButtons[i].interactable = false;
+            }
         }
     }
-    public void WinGame()
+    //load levels
+    public void level1()
     {
-        if (player.score >= player.maxScore)
-        {
-            pauseGameObject.SetActive(false);
-            //win game 
-            WinScreen.SetActive(true);
-            //stop food from falling
-
-
-            player.isMove = false;
-            Time.timeScale = 0;
-        }
+        SceneManager.LoadScene(1);
     }
-
-    public void RetryGame()
+    public void level2()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(2);
     }
-    public void GoToMainMenu()
+    public void level3()
     {
-        SceneManager.LoadScene(0);
-    }
-
-    //unlock next level
-    public void NextLevel()
-    {
-        //which current level is the player in?
-
-        if(score == PlayerPrefs.GetInt("score"))
-        {
-
-        }
-        //ASSIGNED level
         SceneManager.LoadScene(3);
-        score = score + 15;
-        PlayerPrefs.SetInt("score", score);
+    }
+    public void level4()
+    {
+        SceneManager.LoadScene(4);
+    }
+    public void level5()
+    {
+        SceneManager.LoadScene(5);
     }
 
-    public void PauseGame()
+    //rest levels to 1
+    public void resetLvls()
     {
-        Time.timeScale = 0;
-    }
-    public void ResumeGame()
-    {
-        Time.timeScale = 1;
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
+        PlayerPrefs.DeleteAll();
     }
 }

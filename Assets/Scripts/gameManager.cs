@@ -74,14 +74,6 @@ public class gameManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    //unlock next level
-    public void NextLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Level++;
-        PlayerPrefs.SetInt("level", Level);
-    }
-
     public void PauseGame()
     {
         Time.timeScale = 0;
