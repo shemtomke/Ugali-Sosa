@@ -1778,8 +1778,8 @@ MonoBehaviour:
   scoretxt: {fileID: 2018106083}
   maxScoreTxt: {fileID: 1122601938}
   maxScore: 25
-  minPoint: 10
-  maxPoint: 100
+  minPoint: 40
+  maxPoint: 70
   score: 1
   speed: 15
   xBound: 2.28
