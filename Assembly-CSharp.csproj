@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\foodDestroy.cs" />
     <Compile Include="Assets\Scripts\Level Manager Scripts\MoveToNextScene.cs" />
     <Compile Include="Assets\Scripts\menuManager.cs" />
+    <Compile Include="Assets\Scripts\FloatingTxt.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

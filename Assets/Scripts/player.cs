@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 
 public class player : MonoBehaviour
 {
+    public GameObject floatingTxt;
+
     public Text scoretxt;
     //reach this score to proceed to next level
     public Text maxScoreTxt;
@@ -87,11 +89,16 @@ public class player : MonoBehaviour
     //how to acquire or get certain foods
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        var go = Instantiate(floatingTxt, transform.position, Quaternion.identity, transform);
+
         //ugali 1 point
         if (collision.CompareTag("Ugali"))
         {
             score++;
             scoretxt.text = "" + score;
+
+            go.GetComponent<TextMesh>().text = "+1";
+            go.GetComponent<TextMesh>().color = Color.white;
 
             Destroy(collision.gameObject);
         }
@@ -101,6 +108,9 @@ public class player : MonoBehaviour
             score= score + 5;
             scoretxt.text = "" + score;
 
+            go.GetComponent<TextMesh>().text = "+5";
+            go.GetComponent<TextMesh>().color = Color.white;
+
             Destroy(collision.gameObject);
         }
         //chillie -1
@@ -108,6 +118,9 @@ public class player : MonoBehaviour
         {
             score = score - 1;
             scoretxt.text = "" + score;
+
+            go.GetComponent<TextMesh>().text = "-1";
+            go.GetComponent<TextMesh>().color = Color.red;
 
             Destroy(collision.gameObject);
         }
@@ -126,5 +139,6 @@ public class player : MonoBehaviour
             isGameOver = true;
         }
     }
+
     //next level increase/random range the max amount of score
 }

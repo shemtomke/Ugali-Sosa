@@ -1775,6 +1775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52383fdeb2711124a8edf9213258bdd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floatingTxt: {fileID: 4250372113662171792, guid: 56ef180f017fe1a42b4f385f3813f116, type: 3}
   scoretxt: {fileID: 2018106083}
   maxScoreTxt: {fileID: 1122601938}
   maxScore: 25
@@ -4787,7 +4788,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
