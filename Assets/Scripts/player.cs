@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 
 public class player : MonoBehaviour
 {
+    public AudioSource vomit, eating, hotChillie;
+
     public GameObject floatingTxt;
 
     public Text scoretxt;
@@ -100,6 +102,8 @@ public class player : MonoBehaviour
             go.GetComponent<TextMesh>().text = "+1";
             go.GetComponent<TextMesh>().color = Color.white;
 
+            eating.Play();
+
             Destroy(collision.gameObject);
         }
         //nyama +5
@@ -107,6 +111,8 @@ public class player : MonoBehaviour
         {
             score= score + 5;
             scoretxt.text = "" + score;
+
+            eating.Play();
 
             go.GetComponent<TextMesh>().text = "+5";
             go.GetComponent<TextMesh>().color = Color.white;
@@ -128,6 +134,8 @@ public class player : MonoBehaviour
         else
         {
             isGameOver = true;
+            go.GetComponent<TextMesh>().text = " ";
+            vomit.Play();
         }
     }
 
