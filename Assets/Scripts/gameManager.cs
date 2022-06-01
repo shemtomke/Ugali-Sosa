@@ -59,6 +59,9 @@ public class gameManager : MonoBehaviour
             WinScreen.SetActive(true);
             //stop food from falling
             
+            //things to continue falling
+
+            //
 
             player.isMove = false;
             Time.timeScale = 0;
@@ -68,6 +71,7 @@ public class gameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Level++;
+        PlayerPrefs.SetInt("level", Level);
     }
 
     public void RetryGame()

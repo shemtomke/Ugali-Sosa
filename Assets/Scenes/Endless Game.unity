@@ -953,8 +953,6 @@ MonoBehaviour:
   maxValueX: 2.2
   yBound: 6
   timeForTutorial: 0
-  speedToFall: 3
-  maxSpeed: 5
 --- !u!4 &1463750893
 Transform:
   m_ObjectHideFlags: 0

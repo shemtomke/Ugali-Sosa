@@ -8,12 +8,6 @@ public class food : MonoBehaviour
     public GameObject[] foods;
     public float minValueX, maxValueX, yBound, timeForTutorial;
 
-
-    //distance between 
-
-    //speed at which the foods should fall //this should increase overtime and become harder
-    public float speedToFall = 3f;
-    public float maxSpeed = 5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,13 +35,6 @@ public class food : MonoBehaviour
         int randomFood = Random.Range(0, foods.Length);
 
         GameObject gameObject = Instantiate(foods[randomFood], position, Quaternion.identity);
-
-        //speed of the things falling
-        /*if (speedToFall< maxSpeed) 
-        {
-            speedToFall += 0.1f * Time.deltaTime;
-
-        }*/
         
         StartCoroutine(FallingFood());
     }
