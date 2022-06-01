@@ -19,7 +19,7 @@ public class gameManager : MonoBehaviour
 
     private void Awake()
     {
-        Level = PlayerPrefs.GetInt("level", 1);
+        Level = PlayerPrefs.GetInt("level", Level);
     }
     // Start is called before the first frame update
     void Start()
@@ -63,6 +63,11 @@ public class gameManager : MonoBehaviour
             player.isMove = false;
             Time.timeScale = 0;
         }
+    }
+    public void nextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Level++;
     }
 
     public void RetryGame()
