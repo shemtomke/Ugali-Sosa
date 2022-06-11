@@ -33,7 +33,7 @@ public class gameManager : MonoBehaviour
         GameOver();
         WinGame();
 
-        leveltxt.text = "LEVEL :" + " " + Level;
+        leveltxt.text = "" + Level;
     }
 
     public void GameOver()
