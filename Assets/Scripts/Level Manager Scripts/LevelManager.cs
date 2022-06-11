@@ -6,9 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    public Button l1, l2, l3, l4, l5;
+    public Button l1, l2, l3, l4, l5, nextButton, previousButton;
     public int level = 1;
+    private int currentLevel;
 
+    private void Awake()
+    {
+        SelectLevel(0);
+    }
     private void Start()
     {
         l1.interactable = true; //default
@@ -38,6 +43,24 @@ public class LevelManager : MonoBehaviour
                 break;
         }
     }
+
+    private void SelectLevel(int _index)
+    {
+        previousButton.interactable = (_index != 0);
+        nextButton.interactable = (_index != transform.childCount - 1);
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(i == _index);
+        }
+    }
+
+    public void ChangeLevel(int _change)
+    {
+        currentLevel += _change;
+        SelectLevel(currentLevel);
+    }
+
     //load levels
     public void level1()
     {
