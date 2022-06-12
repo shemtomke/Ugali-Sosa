@@ -458,7 +458,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'LEVEL 2:
 
-    MAMA NITILIE'
+    Kwa-Local'
 --- !u!222 &62814187
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2275,7 +2275,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'LEVEL 3:
 
-    JAMBU CAFE'
+    Jambu Cafe'
 --- !u!222 &396402318
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6974,7 +6974,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'LEVEL 5:
 
-    Kwa- Master'
+    Njambi''s'
 --- !u!222 &1056126161
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11527,7 +11527,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'LEVEL 1:
 
-    Kwa- Local'
+    Nyumbani'
 --- !u!222 &1969261829
 CanvasRenderer:
   m_ObjectHideFlags: 0
