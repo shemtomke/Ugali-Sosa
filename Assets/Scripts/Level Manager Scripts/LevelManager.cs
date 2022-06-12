@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    public Button l1, l2, l3, l4, l5, nextButton, previousButton;
+    public Button l2_closed, l2_open, l3_closed, l3_open, l4_closed, l4_open, l5_closed, l5_open, nextButton, previousButton;
     public int level = 1;
     private int currentLevel;
 
@@ -16,30 +16,27 @@ public class LevelManager : MonoBehaviour
     }
     private void Start()
     {
-        l1.interactable = true; //default
-        l2.interactable = false;
-        l3.interactable = false;
-        l4.interactable = false;
-        l5.interactable = false;
-
         level = PlayerPrefs.GetInt("LVL", 1);
 
         switch (level)
         {
             case 1:
-                l1.interactable = true;
                 break;
             case 2:
-                l2.interactable = true;
+                l2_closed.gameObject.SetActive(false);
+                l2_open.gameObject.SetActive(true);
                 break;
             case 3:
-                l3.interactable = true;
+                l3_closed.gameObject.SetActive(false);
+                l3_open.gameObject.SetActive(true);
                 break;
             case 4:
-                l4.interactable = true;
+                l4_closed.gameObject.SetActive(false);
+                l4_open.gameObject.SetActive(true);
                 break;
             case 5:
-                l5.interactable = true;
+                l5_closed.gameObject.SetActive(false);
+                l5_open.gameObject.SetActive(true);
                 break;
         }
     }
@@ -68,6 +65,7 @@ public class LevelManager : MonoBehaviour
     }
     public void level2()
     {
+        //if level prefs reach 2 then set to true in the play button
         SceneManager.LoadScene(2);
     }
     public void level3()
