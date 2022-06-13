@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class gameManager : MonoBehaviour
 {
+
     public player player;
     public food food;
 

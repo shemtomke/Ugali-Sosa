@@ -16,25 +16,42 @@ public class LevelManager : MonoBehaviour
     }
     private void Start()
     {
-        level = PlayerPrefs.GetInt("LVL", 1);
+        level = PlayerPrefs.GetInt("LVL", level);
 
         switch (level)
         {
             case 1:
-                break;
-            case 2:
+            case 2: //open level2 
                 l2_closed.gameObject.SetActive(false);
                 l2_open.gameObject.SetActive(true);
                 break;
-            case 3:
+            case 3: //open level2 - 3
+                l2_closed.gameObject.SetActive(false);
+                l2_open.gameObject.SetActive(true);
+
                 l3_closed.gameObject.SetActive(false);
                 l3_open.gameObject.SetActive(true);
                 break;
-            case 4:
+            case 4: //open level2 - 4
+                l2_closed.gameObject.SetActive(false);
+                l2_open.gameObject.SetActive(true);
+
+                l3_closed.gameObject.SetActive(false);
+                l3_open.gameObject.SetActive(true);
+
                 l4_closed.gameObject.SetActive(false);
                 l4_open.gameObject.SetActive(true);
                 break;
-            case 5:
+            case 5: //open level2 - 5
+                l2_closed.gameObject.SetActive(false);
+                l2_open.gameObject.SetActive(true);
+
+                l3_closed.gameObject.SetActive(false);
+                l3_open.gameObject.SetActive(true);
+
+                l4_closed.gameObject.SetActive(false);
+                l4_open.gameObject.SetActive(true);
+
                 l5_closed.gameObject.SetActive(false);
                 l5_open.gameObject.SetActive(true);
                 break;
