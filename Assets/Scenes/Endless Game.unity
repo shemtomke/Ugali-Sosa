@@ -1049,6 +1049,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52383fdeb2711124a8edf9213258bdd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSprite: {fileID: 334291811}
+  playerLose: {fileID: 21300000, guid: 7f2fbaf60bfcc6c489d36efdfb86454b, type: 3}
+  playerNormal: {fileID: 21300000, guid: e98a024a0d5b1ad4e96cdb37ab645efb, type: 3}
+  playerWin: {fileID: 21300000, guid: 55402333d5fbe204eb6ee9a56172c80d, type: 3}
   vomit: {fileID: 429353261}
   eating: {fileID: 813110450}
   hotChillie: {fileID: 0}

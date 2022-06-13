@@ -6,6 +6,10 @@ using UnityEngine.EventSystems;
 
 public class player : MonoBehaviour
 {
+    public SpriteRenderer playerSprite;
+    public Sprite playerLose, playerNormal;
+    public Sprite playerWin;
+
     public AudioSource vomit, eating, hotChillie;
 
     public GameObject floatingTxt;
@@ -53,6 +57,8 @@ public class player : MonoBehaviour
         ScoreDeath();
         Movement();
         slider.value = score;
+
+        playerSprite.sprite = playerNormal;
     }
 
     public void Movement()
@@ -102,6 +108,7 @@ public class player : MonoBehaviour
             go.GetComponent<TextMesh>().text = "+1";
             go.GetComponent<TextMesh>().color = Color.white;
 
+            playerSprite.sprite = playerWin;
             eating.Play();
 
             Destroy(collision.gameObject);
@@ -112,6 +119,7 @@ public class player : MonoBehaviour
             score= score + 5;
             scoretxt.text = "" + score;
 
+            playerSprite.sprite = playerWin;
             eating.Play();
 
             go.GetComponent<TextMesh>().text = "+5";
@@ -128,14 +136,22 @@ public class player : MonoBehaviour
             go.GetComponent<TextMesh>().text = "-1";
             go.GetComponent<TextMesh>().color = Color.red;
 
+            playerSprite.sprite = playerLose;
+
             Destroy(collision.gameObject);
         }
         //mkorogo - instant kill - game over
-        else
+        else if (collision.CompareTag("Mkorogo"))
         {
             isGameOver = true;
             go.GetComponent<TextMesh>().text = " ";
+
+            playerSprite.sprite = playerLose;
             vomit.Play();
+        }
+        else
+        {
+            playerSprite.sprite = playerNormal;
         }
     }
 
