@@ -45,7 +45,8 @@ public class gameManager : MonoBehaviour
             //show gameover screen
             GameOverScreen.SetActive(true);
             //stop food from falling
-            
+
+            player.playerSprite.sprite = player.playerLose;
 
             player.isMove = false;
             Time.timeScale = 0;
@@ -59,10 +60,12 @@ public class gameManager : MonoBehaviour
             //win game 
             WinScreen.SetActive(true);
             //stop food from falling
-            
+
             //things to continue falling
 
             //
+
+            player.playerSprite.sprite = player.playerWin;
 
             player.isMove = false;
             Time.timeScale = 0;

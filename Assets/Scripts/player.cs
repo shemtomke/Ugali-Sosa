@@ -57,8 +57,6 @@ public class player : MonoBehaviour
         ScoreDeath();
         Movement();
         slider.value = score;
-
-        playerSprite.sprite = playerNormal;
     }
 
     public void Movement()
@@ -108,7 +106,7 @@ public class player : MonoBehaviour
             go.GetComponent<TextMesh>().text = "+1";
             go.GetComponent<TextMesh>().color = Color.white;
 
-            playerSprite.sprite = playerWin;
+            StartCoroutine("showWin");
             eating.Play();
 
             Destroy(collision.gameObject);
@@ -119,7 +117,7 @@ public class player : MonoBehaviour
             score= score + 5;
             scoretxt.text = "" + score;
 
-            playerSprite.sprite = playerWin;
+            StartCoroutine("showWin");
             eating.Play();
 
             go.GetComponent<TextMesh>().text = "+5";
@@ -136,7 +134,8 @@ public class player : MonoBehaviour
             go.GetComponent<TextMesh>().text = "-1";
             go.GetComponent<TextMesh>().color = Color.red;
 
-            playerSprite.sprite = playerLose;
+            StartCoroutine("showLose");
+            //hotChillie.Play();
 
             Destroy(collision.gameObject);
         }
@@ -146,13 +145,35 @@ public class player : MonoBehaviour
             isGameOver = true;
             go.GetComponent<TextMesh>().text = " ";
 
-            playerSprite.sprite = playerLose;
+            StartCoroutine("showLose");
             vomit.Play();
         }
         else
         {
             playerSprite.sprite = playerNormal;
         }
+    }
+
+    IEnumerator showWin()
+    {
+        yield return new WaitForSeconds(0);
+
+        playerSprite.sprite = playerWin;
+
+        yield return new WaitForSeconds(0.5f);
+
+        playerSprite.sprite = playerNormal;
+    }
+
+    IEnumerator showLose()
+    {
+        yield return new WaitForSeconds(0);
+
+        playerSprite.sprite = playerLose;
+
+        yield return new WaitForSeconds(0.5f);
+
+        playerSprite.sprite = playerNormal;
     }
 
     //score less than 1 then die
@@ -163,6 +184,4 @@ public class player : MonoBehaviour
             isGameOver = true;
         }
     }
-
-    //next level increase/random range the max amount of score
 }
