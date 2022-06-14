@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637907090827963953
-    m_Hash: 1770687089
+      ticks: 637908105447619174
+    m_Hash: 3096276417
   m_LockFileStatus:
     m_FilePath: E:/Unity Projects/UGALI SOSA/Ugali-Sosa/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637907090832939090
-    m_Hash: 490954681
+      ticks: 637908105624923634
+    m_Hash: 4085818739
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -133,6 +133,7 @@ m_PackageAssets:
         - 8.0.1
         - 8.0.2
         - 9.0.0-pre.1
+        - 9.0.0-pre.3
         compatible:
         - 5.1.0
         - 5.1.1
@@ -348,6 +349,7 @@ m_PackageAssets:
         - 7.0.0
         - 7.0.1
         - 8.0.0-pre.1
+        - 8.0.0-pre.3
         compatible:
         - 4.2.0
         - 4.3.0
@@ -1227,6 +1229,190 @@ m_PackageAssets:
         type: git
         url: git+https://github.com/Unity-Technologies/com.unity.ide.vscode.git
         revision: 1f4f605d5c988cb610c372b5c5216c46cc8f5d30
+        path: 
+    - packageId: com.unity.purchasing@3.1.0
+      testable: 0
+      isDirectDependency: 1
+      version: 3.1.0
+      source: 1
+      resolvedPath: E:\Unity Projects\UGALI SOSA\Ugali-Sosa\Library\PackageCache\com.unity.purchasing@3.1.0
+      assetPath: Packages/com.unity.purchasing
+      name: com.unity.purchasing
+      displayName: In App Purchasing
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: "IMPORTANT UPGRADE NOTES:\n\nIf updating from Unity IAP (com.unity.purchasing
+        + the Asset Store plugin) versions 2.x to version 3.x, complete the following
+        actions in order to resolve compilation errors:\n 1. Move IAPProductCatalog.json
+        and BillingMode.json\n\tFROM: Assets/Plugins/UnityPurchasing/Resources/\n\tTO:
+        Assets/Resources/.\n 2. Move AppleTangle.cs and GooglePlayTangle.cs\n\tFROM:
+        Assets/Plugins/UnityPurchasing/generated\n\tTO: Assets/Scripts/UnityPurchasing/generated.\n
+        3. Remove all remaining Asset Store plugin folders and files in Assets/Plugins/UnityPurchasing
+        from your project.\n\nPACKAGE DESCRIPTION:\n\nWith Unity IAP, setting up
+        in-app purchases for your game across multiple app stores has never been
+        easier.\n\nThis package provides:\n\n \u25AA One common API to access all
+        stores for free so you can fully understand and optimize your in-game economy\n
+        \u25AA Automatic coupling with Unity Analytics to enable monitoring and decision-making
+        based on trends in your revenue and purchase data across multiple platforms\n
+        \u25AA Support for iOS, Mac, tvOS, Google Play, Windows, Amazon, and Samsung
+        Galaxy app stores\n \u25AA Support to work with the Unity Distribution Portal
+        to synchronize catalogs and transactions with other app stores\n \u25AA Client-side
+        receipt validation for Apple App Store and Google Play\n\nAfter installing
+        this package, open the Services Window to enable In-App Purchasing to use
+        these features."
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.0.3
+        - 0.0.4
+        - 0.0.5
+        - 0.0.6
+        - 0.0.7
+        - 0.0.8
+        - 0.0.9
+        - 0.0.10
+        - 0.0.11
+        - 0.0.12
+        - 0.0.13
+        - 0.0.14
+        - 0.0.15
+        - 0.0.16
+        - 0.0.17
+        - 0.0.18
+        - 0.0.19
+        - 2.0.0
+        - 2.0.1
+        - 2.0.3
+        - 2.0.5
+        - 2.0.6
+        - 2.1.0
+        - 2.1.1
+        - 2.2.0
+        - 2.2.1
+        - 2.2.2
+        - 3.0.0-pre.3
+        - 3.0.0-pre.4
+        - 3.0.0-pre.5
+        - 3.0.0-pre.6
+        - 3.0.1
+        - 3.0.2
+        - 3.1.0
+        - 3.2.1
+        - 3.2.2
+        - 3.2.3
+        - 4.0.0
+        - 4.0.3
+        - 4.1.0
+        - 4.1.1
+        - 4.1.2
+        - 4.1.3
+        - 4.1.4
+        - 4.1.5
+        - 4.2.0-pre.1
+        - 4.2.0-pre.2
+        compatible:
+        - 0.0.3
+        - 0.0.4
+        - 0.0.5
+        - 0.0.6
+        - 0.0.7
+        - 0.0.8
+        - 0.0.9
+        - 0.0.10
+        - 0.0.11
+        - 0.0.12
+        - 0.0.13
+        - 0.0.14
+        - 0.0.15
+        - 0.0.16
+        - 0.0.17
+        - 0.0.18
+        - 0.0.19
+        - 2.0.0
+        - 2.0.1
+        - 2.0.3
+        - 2.0.5
+        - 2.0.6
+        - 2.1.0
+        - 2.1.1
+        - 2.2.0
+        - 2.2.1
+        - 2.2.2
+        - 3.0.0-pre.3
+        - 3.0.0-pre.4
+        - 3.0.0-pre.5
+        - 3.0.0-pre.6
+        - 3.0.1
+        - 3.0.2
+        - 3.1.0
+        - 3.2.1
+        - 3.2.2
+        - 3.2.3
+        - 4.0.0
+        - 4.0.3
+        - 4.1.0
+        - 4.1.1
+        - 4.1.2
+        - 4.1.3
+        - 4.1.4
+        - 4.1.5
+        - 4.2.0-pre.1
+        - 4.2.0-pre.2
+        verified: 4.1.5
+      dependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.unityanalytics
+        version: 1.0.0
+      - name: com.unity.modules.unitywebrequest
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      - name: com.unity.modules.androidjni
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      - name: com.unity.modules.unityanalytics
+        version: 1.0.0
+      - name: com.unity.modules.unitywebrequest
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      - name: com.unity.modules.androidjni
+        version: 1.0.0
+      keywords:
+      - purchasing
+      - iap
+      - unity
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 0
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637544658080000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.purchasing.git
+        revision: 0fda3405fb97bcc9ca72bf03834fcfee6061bacc
         path: 
     - packageId: com.unity.test-framework@1.1.29
       testable: 0
@@ -3745,6 +3931,7 @@ m_PackageAssets:
         - 7.0.0-pre.4
         - 7.0.0
         - 8.0.0-pre.1
+        - 8.0.0-pre.2
         compatible:
         - 4.1.0
         - 4.2.0
