@@ -20,12 +20,6 @@ public class food : MonoBehaviour
         
     }
 
-    public void Move()
-    {
-        //increase speed of the items
-
-    }
-
     public IEnumerator FallingFood()
     {
         yield return new WaitForSeconds(Random.Range(0f, 2f));

@@ -9,6 +9,7 @@ public class RewardAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
     [SerializeField] Button _showAdButton;
     [SerializeField] string _androidAdUnitId = "Rewarded_Android";
     [SerializeField] string _iOSAdUnitId = "Rewarded_iOS";
+    [SerializeField] gameManager manager;
     string _adUnitId = null; // This will remain null for unsupported platforms
 
     void Awake()
@@ -63,7 +64,7 @@ public class RewardAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
             Debug.Log("Unity Ads Rewarded Ad Completed");
             // Grant a reward.
             //deactivate the gameover, set isMove to true, isgameover to false
-            Debug.Log("Player Revives!");
+            manager.ResumeOnRewardAds();
 
             // Load another ad:
             Advertisement.Load(_adUnitId, this);

@@ -921,6 +921,7 @@ MonoBehaviour:
   _showAdButton: {fileID: 263681419}
   _androidAdUnitId: Rewarded_Android
   _iOSAdUnitId: Rewarded_iOS
+  manager: {fileID: 292157119}
 --- !u!1 &278272343
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,53 +1001,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278272343}
   m_CullTransparentMesh: 1
---- !u!1 &284473365
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 284473367}
-  - component: {fileID: 284473366}
-  m_Layer: 0
-  m_Name: AdsManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &284473366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284473365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37f734d4086da7d48a234172d25c13e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  androidGameId: 4795951
-  iosGameId: 4795950
-  testMode: 1
-  rewardAds: {fileID: 263681422}
---- !u!4 &284473367
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 284473365}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.60979176, y: 1.8352067, z: 264.2712}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &292157118
 GameObject:
   m_ObjectHideFlags: 0
@@ -5556,6 +5510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1715903062}
+  - component: {fileID: 1715903064}
   m_Layer: 5
   m_Name: GameOver
   m_TagString: Untagged
@@ -5585,6 +5540,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1715903064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715903061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f734d4086da7d48a234172d25c13e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  androidGameId: 4795951
+  iosGameId: 4795950
+  testMode: 1
+  rewardAds: {fileID: 263681422}
 --- !u!1 &1734376557
 GameObject:
   m_ObjectHideFlags: 0

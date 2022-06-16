@@ -13,7 +13,7 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
 
     private string gameId;
 
-    private void Awake()
+    private void OnEnable()
     {
         InitializeAds();
     }

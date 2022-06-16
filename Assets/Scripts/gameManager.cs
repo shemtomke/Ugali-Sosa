@@ -70,6 +70,37 @@ public class gameManager : MonoBehaviour
             Time.timeScale = 0;
         }
     }
+
+    public void ResumeOnRewardAds()
+    {
+        StartCoroutine(countdownAfterAds());
+    }
+
+    public IEnumerator countdownAfterAds()
+    {
+        yield return new WaitForSeconds(1);
+        //countdown 3
+        //is game over to false
+        Debug.Log("3");
+        player.isGameOver = false;
+
+        yield return new WaitForSeconds(1);
+        //countdown 2
+        Debug.Log("2");
+
+        yield return new WaitForSeconds(1);
+        //countdown 1
+        Debug.Log("1");
+
+        yield return new WaitForSeconds(0.1f);
+        //resume
+        Debug.Log("Resume");
+        //move player
+        //time scale to 1
+        player.isMove = true;
+        Time.timeScale = 1;
+
+    }
     public void nextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
