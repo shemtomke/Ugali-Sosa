@@ -56,41 +56,17 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\MobileTools\Scripts\Utils\Popup.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Debug\TabItem.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Debug\AdsConsoleItem.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Ads\MobileAdsManager.cs" />
     <Compile Include="Assets\Scripts\player.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Utils\InvokeOnMainThread.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Utils\Utils.cs" />
     <Compile Include="Assets\Scripts\FloatingTxt.cs" />
     <Compile Include="Assets\Scripts\gameManager.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Utils\GameObjectPoolItem.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Debug\DebugConsoleItem.cs" />
     <Compile Include="Assets\Scripts\food.cs" />
     <Compile Include="Assets\Scripts\levels.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\IAP\IAPManager.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Utils\SingletonComponent.cs" />
     <Compile Include="Assets\Scripts\Level Manager Scripts\LevelManager.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Utils\ScriptableObjectUtilities.cs" />
     <Compile Include="Assets\Scripts\Unity Ads\AdsInitializer.cs" />
     <Compile Include="Assets\Scripts\foodDestroy.cs" />
     <Compile Include="Assets\Scripts\Level Manager Scripts\MoveToNextScene.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Debug\GameDebugManager.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Utils\GameObjectPool.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Ads\AdNetworkHandlers\AdMobNetworkHandler.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\IAP\IAPSettings.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Utils\SimpleJSON.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Utils\SingletonScriptableObject.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Utils\ClickableListItem.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Ads\AdNetworkHandler.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Utils\UIAnimation.cs" />
     <Compile Include="Assets\Scripts\Unity Ads\RewardAds.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Debug\IAPConsoleItem.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Debug\IAPTestButton.cs" />
     <Compile Include="Assets\Scripts\menuManager.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Ads\MobileAdsSettings.cs" />
-    <Compile Include="Assets\MobileTools\Scripts\Ads\AdNetworkHandlers\UnityAdsNetworkHander.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
