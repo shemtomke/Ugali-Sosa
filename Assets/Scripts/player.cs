@@ -6,6 +6,9 @@ using UnityEngine.EventSystems;
 
 public class player : MonoBehaviour
 {
+    [Header("Adjusting Player Speed")]
+    public Slider speedSlider;
+
     public SpriteRenderer playerSprite;
     public Sprite playerLose, playerNormal;
     public Sprite playerWin;

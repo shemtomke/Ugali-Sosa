@@ -8,8 +8,7 @@ public class food : MonoBehaviour
     public GameObject[] foods;
     public float minValueX, maxValueX, yBound, timeForTutorial;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
         StartCoroutine(FallingFood());
     }

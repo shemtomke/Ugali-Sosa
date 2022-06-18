@@ -67,6 +67,11 @@
     <Compile Include="Assets\Scripts\Level Manager Scripts\MoveToNextScene.cs" />
     <Compile Include="Assets\Scripts\Unity Ads\RewardAds.cs" />
     <Compile Include="Assets\Scripts\menuManager.cs" />
+    <Compile Include="Assets\Scripts\Game Resolution\AnchorGameObject.cs" />
+    <Compile Include="Assets\Scripts\Game Resolution\ScaleToFitScreen.cs" />
+    <Compile Include="Assets\Scripts\Game Resolution\CameraViewportHandler.cs" />
+    <Compile Include="Assets\Scripts\TutorialPoint.cs" />
+    <Compile Include="Assets\Scripts\CatchUp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
