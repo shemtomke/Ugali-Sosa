@@ -50,6 +50,10 @@ public class gameManager : MonoBehaviour
             player.isMove = false;
             Time.timeScale = 0;
         }
+        else
+        {
+            GameOverScreen.SetActive(false);
+        }
     }
     public void WinGame()
     {
@@ -73,12 +77,15 @@ public class gameManager : MonoBehaviour
 
     public void ResumeOnRewardAds()
     {
-        StartCoroutine(countdownAfterAds());
+        player.isGameOver = false;
+        player.isMove = true;
+        Time.timeScale = 1;
+        //StartCoroutine(countdownAfterAds());
     }
 
     public IEnumerator countdownAfterAds()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.1f);
         //countdown 3
         //is game over to false
         Debug.Log("3");

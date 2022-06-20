@@ -194,4 +194,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1390999371099790838}
-  level: 0
+  CurrentSpeed: 0
+  MaxSpeed: 3
+  speed: 0.5
