@@ -231,3 +231,9 @@ Library/SceneVisibilityState.asset
 Library/SourceAssetDB
 Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json
 .vs/Ugali-Sosa/v16/.suo
+*.json
+Library/expandedItems
+*.asset
+*.dwlt
+Library/ArtifactDB
+Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json
