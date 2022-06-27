@@ -638,7 +638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &169609546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,6 +653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Gain_Slider: {fileID: 2045969439}
   player: {fileID: 334291809}
+  amountToDeplete: 0.1
 --- !u!4 &169609547
 Transform:
   m_ObjectHideFlags: 0
@@ -1485,7 +1486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52383fdeb2711124a8edf9213258bdd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedSlider: {fileID: 0}
+  catchUp: {fileID: 169609546}
   playerSprite: {fileID: 334291811}
   playerLose: {fileID: 21300000, guid: 7f2fbaf60bfcc6c489d36efdfb86454b, type: 3}
   playerNormal: {fileID: 21300000, guid: e98a024a0d5b1ad4e96cdb37ab645efb, type: 3}
@@ -1923,7 +1924,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4453,7 +4454,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4760,7 +4761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1270581130
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6640,6 +6641,7 @@ MonoBehaviour:
   MovePlayer: {fileID: 2012238341}
   How_To_Win: {fileID: 679499730}
   FoodManager: {fileID: 1463750891}
+  HealthDeplete: {fileID: 169609545}
 --- !u!1 &1834671903
 GameObject:
   m_ObjectHideFlags: 0
@@ -7361,7 +7363,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 300}
+  m_SizeDelta: {x: 0, y: 858.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2012238343
 MonoBehaviour:
@@ -7391,12 +7393,13 @@ MonoBehaviour:
     m_MinSize: 0
     m_MaxSize: 100
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2
-  m_Text: "Hold & Drag the player \nLEFT or RIGHT to EAT!"
+  m_Text: "Hold & Drag the player \nLEFT or RIGHT to EAT!\n\nTHE SLIDER DEPLETES
+    EVERY SECOND UNLESS YOU EAT UGALI/SOSA!"
 --- !u!222 &2012238344
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7642,9 +7645,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 10
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 10
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -7664,7 +7667,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2058184509
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7733,7 +7736,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

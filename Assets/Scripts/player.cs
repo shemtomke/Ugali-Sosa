@@ -7,12 +7,14 @@ using UnityEngine.EventSystems;
 public class player : MonoBehaviour
 {
     [Header("Adjusting Player Speed")]
-    public Slider speedSlider;
+    public CatchUp catchUp;
 
+    [Header("Player Emotions")]
     public SpriteRenderer playerSprite;
     public Sprite playerLose, playerNormal;
     public Sprite playerWin;
 
+    [Header("Player Audio")]
     public AudioSource vomit, eating, hotChillie;
 
     public GameObject floatingTxt;
@@ -103,6 +105,10 @@ public class player : MonoBehaviour
         //ugali 1 point
         if (collision.CompareTag("Ugali"))
         {
+            catchUp.Gain_Slider.maxValue += 1;
+            catchUp.Gain_Slider.value += 1;
+            //catchUp.amountToDeplete += 0.1f;
+
             score++;
             scoretxt.text = "" + score;
 
@@ -117,7 +123,11 @@ public class player : MonoBehaviour
         //nyama +5
         else if(collision.CompareTag("Nyama"))
         {
-            score= score + 5;
+            catchUp.Gain_Slider.maxValue += 5;
+            catchUp.Gain_Slider.value += 5;
+            //catchUp.amountToDeplete += 0.2f;
+
+            score = score + 5;
             scoretxt.text = "" + score;
 
             StartCoroutine("showWin");
@@ -131,6 +141,9 @@ public class player : MonoBehaviour
         //chillie -1
         else if(collision.CompareTag("Chillie"))
         {
+            catchUp.Gain_Slider.maxValue -= 1;
+            catchUp.Gain_Slider.value -= 1;
+
             score = score - 1;
             scoretxt.text = "" + score;
 
@@ -145,6 +158,9 @@ public class player : MonoBehaviour
         //mkorogo - instant kill - game over
         else if (collision.CompareTag("Mkorogo"))
         {
+            catchUp.Gain_Slider.maxValue -= 5;
+            catchUp.Gain_Slider.value -= 5;
+
             isGameOver = true;
             go.GetComponent<TextMesh>().text = " ";
 

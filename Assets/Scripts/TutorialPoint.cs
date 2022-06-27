@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class TutorialPoint : MonoBehaviour
 {
-    public GameObject MovePlayer, How_To_Win, FoodManager;
+    public GameObject MovePlayer, How_To_Win, FoodManager, HealthDeplete;
 
     private void Start()
     {
@@ -14,6 +14,7 @@ public class TutorialPoint : MonoBehaviour
         {
             StopCoroutine(startTutorial());
             FoodManager.SetActive(true);
+            HealthDeplete.SetActive(true);
         }
         else
         {
@@ -39,6 +40,7 @@ public class TutorialPoint : MonoBehaviour
         MovePlayer.SetActive(false);
         How_To_Win.SetActive(false);
         FoodManager.SetActive(true);
+        HealthDeplete.SetActive(true);
     }
 
 }
