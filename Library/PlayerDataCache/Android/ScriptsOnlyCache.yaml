@@ -784,13 +784,13 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: 4d0de2fb0f39793a7774fbde7824814b
+      Hash: ada6be231229e34a79489155c8e1214b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TutorialPoint
   - hash:
       serializedVersion: 2
-      Hash: 98b16481b73d53f73695ac05d49de410
+      Hash: aa002d75161d3fcde7798b23b48f9777
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: player
@@ -1066,7 +1066,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 70ec5da6ce83d4d53795144dab6785f1
+      Hash: 023a29c40776da3c7af5f20676c10a74
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CatchUp
