@@ -653,7 +653,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Gain_Slider: {fileID: 2045969439}
   player: {fileID: 334291809}
-  amountToDeplete: 0.1
+  amountToDeplete: 0.03
+  depleteValue: 0.08
 --- !u!4 &169609547
 Transform:
   m_ObjectHideFlags: 0
@@ -3146,7 +3147,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'SOSA : +5 POINTS
+  m_Text: 'NYAMA : +5 POINTS
 
 
     UGALI : +1 POINT

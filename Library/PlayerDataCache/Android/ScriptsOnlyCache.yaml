@@ -29,8 +29,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
-    Unity.PlasticSCM.Editor.dll:
-    - Unity.PlasticSCM.Editor.PlasticWindow
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -38,12 +36,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -1066,7 +1058,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 023a29c40776da3c7af5f20676c10a74
+      Hash: 690ad464d9cf085201671c0aa9fb3508
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CatchUp
@@ -1367,4 +1359,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level4.unity
   - Assets/Scenes/Level5.unity
   - Assets/Scenes/Endless Game.unity
-  playerPath: C:/Users/SHEM TOM/Downloads/Ugali Sosa.apk
+  playerPath: C:/Users/SHEM TOM/Downloads/Ugali Sosa.aab

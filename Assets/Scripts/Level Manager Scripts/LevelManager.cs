@@ -21,6 +21,9 @@ public class LevelManager : MonoBehaviour
         switch (level)
         {
             case 1:
+                l2_closed.gameObject.SetActive(true);
+                l2_open.gameObject.SetActive(false);
+                break;
             case 2: //open level2 
                 l2_closed.gameObject.SetActive(false);
                 l2_open.gameObject.SetActive(true);
