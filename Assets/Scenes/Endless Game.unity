@@ -1563,6 +1563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52383fdeb2711124a8edf9213258bdd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endlessScene: Endless Game
   catchUp: {fileID: 169609546}
   playerSprite: {fileID: 334291811}
   playerLose: {fileID: 21300000, guid: 7f2fbaf60bfcc6c489d36efdfb86454b, type: 3}
@@ -1570,7 +1571,7 @@ MonoBehaviour:
   playerWin: {fileID: 21300000, guid: 55402333d5fbe204eb6ee9a56172c80d, type: 3}
   vomit: {fileID: 429353261}
   eating: {fileID: 813110450}
-  hotChillie: {fileID: 0}
+  hotChillie: {fileID: 1602326564}
   floatingTxt: {fileID: 4250372113662171792, guid: 56ef180f017fe1a42b4f385f3813f116, type: 3}
   scoretxt: {fileID: 867057674}
   maxScoreTxt: {fileID: 1594174617}
@@ -2387,9 +2388,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bb499eee29f78304ca4e4cbc5ed601e0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3729,7 +3730,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 73b60584081898849a6cd81afd2713a9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6354,9 +6355,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 73b60584081898849a6cd81afd2713a9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b283a7ca0a1c93642ba2017d94da4d4c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7304,6 +7305,7 @@ MonoBehaviour:
   How_To_Win: {fileID: 679499730}
   FoodManager: {fileID: 1463750891}
   HealthDeplete: {fileID: 169609545}
+  endlessScene: 
 --- !u!1 &1834671903
 GameObject:
   m_ObjectHideFlags: 0

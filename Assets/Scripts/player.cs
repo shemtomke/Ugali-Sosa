@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class player : MonoBehaviour
 {
-    [Header("Adjusting Player Speed")]
+    public string endlessScene;
+
+    //Adjusting Player Speed"
     public CatchUp catchUp;
 
     [Header("Player Emotions")]
@@ -17,6 +20,7 @@ public class player : MonoBehaviour
     [Header("Player Audio")]
     public AudioSource vomit, eating, hotChillie;
 
+    [Header("Floating Effect UI")]
     public GameObject floatingTxt;
 
     public Text scoretxt;
@@ -40,9 +44,17 @@ public class player : MonoBehaviour
     public bool isMove;
 
     Rigidbody2D rb;
+    Scene scene;
+
     // Start is called before the first frame update
     void Start()
     {
+        scene = SceneManager.GetActiveScene();
+
+        if(catchUp == null)
+        {
+            return;
+        }
         //new Score
         maxScore = Random.Range(minPoint, maxPoint);
 
@@ -116,9 +128,13 @@ public class player : MonoBehaviour
             StartCoroutine("showWin");
             eating.Play();
 
-            catchUp.Gain_Slider.maxValue += 1;
-            catchUp.Gain_Slider.value += 1;
-            catchUp.amountToDeplete += catchUp.depleteValue;
+            if (scene.name == endlessScene)
+            {
+                catchUp.Gain_Slider.maxValue += 1;
+                catchUp.Gain_Slider.value += 1;
+                catchUp.amountToDeplete += catchUp.depleteValue;
+            }
+            
         }
         //nyama +5
         else if(collision.CompareTag("Nyama"))
@@ -134,9 +150,12 @@ public class player : MonoBehaviour
             go.GetComponent<TextMesh>().text = "+5";
             go.GetComponent<TextMesh>().color = Color.white;
 
-            catchUp.Gain_Slider.maxValue += 5;
-            catchUp.Gain_Slider.value += 5;
-            catchUp.amountToDeplete += catchUp.depleteValue;
+            if (scene.name == endlessScene)
+            {
+                catchUp.Gain_Slider.maxValue += 5;
+                catchUp.Gain_Slider.value += 5;
+                catchUp.amountToDeplete += catchUp.depleteValue;
+            } 
         }
         //chillie -1
         else if(collision.CompareTag("Chillie"))
@@ -150,10 +169,13 @@ public class player : MonoBehaviour
             go.GetComponent<TextMesh>().color = Color.red;
 
             StartCoroutine("showLose");
-            //hotChillie.Play();
+            hotChillie.Play();
 
-            catchUp.Gain_Slider.maxValue -= 1;
-            catchUp.Gain_Slider.value -= 1;
+            if (scene.name == endlessScene)
+            {
+                catchUp.Gain_Slider.maxValue -= 1;
+                catchUp.Gain_Slider.value -= 1;
+            }
         }
         //mkorogo - instant kill - game over
         else if (collision.CompareTag("Mkorogo"))
@@ -164,8 +186,11 @@ public class player : MonoBehaviour
             StartCoroutine("showLose");
             vomit.Play();
 
-            catchUp.Gain_Slider.maxValue -= 5;
-            catchUp.Gain_Slider.value -= 5;
+            if (scene.name == endlessScene)
+            {
+                catchUp.Gain_Slider.maxValue -= 5;
+                catchUp.Gain_Slider.value -= 5;
+            }
         }
         else
         {
