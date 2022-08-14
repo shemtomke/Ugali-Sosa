@@ -2554,7 +2554,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52383fdeb2711124a8edf9213258bdd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endlessScene: Endless Game
   playerSprite: {fileID: 737601336}
   playerLose: {fileID: 21300000, guid: 7f2fbaf60bfcc6c489d36efdfb86454b, type: 3}
   playerNormal: {fileID: 21300000, guid: e98a024a0d5b1ad4e96cdb37ab645efb, type: 3}
@@ -6410,8 +6409,7 @@ MonoBehaviour:
   MovePlayer: {fileID: 648699311}
   How_To_Win: {fileID: 1445792787}
   FoodManager: {fileID: 1463750891}
-  HealthDeplete: {fileID: 0}
-  endlessScene: 
+  barStart: 0
 --- !u!1 &1952326787
 GameObject:
   m_ObjectHideFlags: 0
@@ -6848,7 +6846,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3796a6747e627d540aa7a06d6404fe47, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b283a7ca0a1c93642ba2017d94da4d4c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.15
   m_Pitch: 1

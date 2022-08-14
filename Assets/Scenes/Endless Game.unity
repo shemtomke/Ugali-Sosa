@@ -698,53 +698,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150477112}
   m_CullTransparentMesh: 1
---- !u!1 &169609545
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 169609547}
-  - component: {fileID: 169609546}
-  m_Layer: 0
-  m_Name: Health Depletes
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &169609546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169609545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 165a9acbac31a544284d39b4381a058e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Gain_Slider: {fileID: 2045969439}
-  player: {fileID: 334291809}
-  amountToDeplete: 0.03
-  depleteValue: 0.08
---- !u!4 &169609547
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169609545}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2578602, y: 4.9242, z: 448.86667}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &181890997
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,6 +1471,7 @@ GameObject:
   - component: {fileID: 334291810}
   - component: {fileID: 334291809}
   - component: {fileID: 334291808}
+  - component: {fileID: 334291813}
   m_Layer: 0
   m_Name: 'Level_Player '
   m_TagString: Untagged
@@ -1563,8 +1517,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52383fdeb2711124a8edf9213258bdd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endlessScene: Endless Game
-  catchUp: {fileID: 169609546}
   playerSprite: {fileID: 334291811}
   playerLose: {fileID: 21300000, guid: 7f2fbaf60bfcc6c489d36efdfb86454b, type: 3}
   playerNormal: {fileID: 21300000, guid: e98a024a0d5b1ad4e96cdb37ab645efb, type: 3}
@@ -1585,6 +1537,9 @@ MonoBehaviour:
   fill: {fileID: 392648945}
   isGameOver: 0
   isMove: 0
+  isUgali: 0
+  isMeat: 0
+  isChillie: 0
 --- !u!50 &334291810
 Rigidbody2D:
   serializedVersion: 4
@@ -1671,6 +1626,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &334291813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334291807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 165a9acbac31a544284d39b4381a058e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Gain_Slider: {fileID: 2045969439}
+  player: {fileID: 334291809}
+  amountToDeplete: 0.05
+  depleteValue: 0.08
+  tutorialPoint: {fileID: 1809462001}
 --- !u!1 &334737772
 GameObject:
   m_ObjectHideFlags: 0
@@ -7304,8 +7276,7 @@ MonoBehaviour:
   MovePlayer: {fileID: 2012238341}
   How_To_Win: {fileID: 679499730}
   FoodManager: {fileID: 1463750891}
-  HealthDeplete: {fileID: 169609545}
-  endlessScene: 
+  barStart: 0
 --- !u!1 &1834671903
 GameObject:
   m_ObjectHideFlags: 0

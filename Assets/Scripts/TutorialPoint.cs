@@ -7,24 +7,17 @@ using UnityEngine.SceneManagement;
 
 public class TutorialPoint : MonoBehaviour
 {
-    public GameObject MovePlayer, How_To_Win, FoodManager, HealthDeplete;
-    public string endlessScene;
+    public GameObject MovePlayer, How_To_Win, FoodManager;
+    public bool barStart = false;
 
     Scene scene;
     private void Start()
     {
-        scene = SceneManager.GetActiveScene();
-
-        
         if (PlayerPrefs.GetInt("LVL") >= 2 || PlayerPrefs.GetInt("level") >= 2)
         {
             StopCoroutine(startTutorial());
             FoodManager.SetActive(true);
-
-            if (scene.name == endlessScene)
-            {
-                HealthDeplete.SetActive(true);//only in endless
-            }
+            barStart = true;
         }
         else
         {
@@ -50,11 +43,7 @@ public class TutorialPoint : MonoBehaviour
         MovePlayer.SetActive(false);
         How_To_Win.SetActive(false);
         FoodManager.SetActive(true);
-
-        if (scene.name == endlessScene)
-        {
-            HealthDeplete.SetActive(true);//only in endless
-        }
+        barStart = true;
     }
 
 }

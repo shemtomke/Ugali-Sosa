@@ -7,11 +7,6 @@ using UnityEngine.EventSystems;
 
 public class player : MonoBehaviour
 {
-    public string endlessScene;
-
-    //Adjusting Player Speed"
-    public CatchUp catchUp;
-
     [Header("Player Emotions")]
     public SpriteRenderer playerSprite;
     public Sprite playerLose, playerNormal;
@@ -26,7 +21,6 @@ public class player : MonoBehaviour
     public Text scoretxt;
     //reach this score to proceed to next level
     public Text maxScoreTxt;
-
 
     public int maxScore, minPoint, maxPoint; //increase for new levels
     public int score = 1;
@@ -43,18 +37,13 @@ public class player : MonoBehaviour
     //move the player
     public bool isMove;
 
+    public bool isUgali = false, isMeat = false, isChillie = false;
+
     Rigidbody2D rb;
-    Scene scene;
 
     // Start is called before the first frame update
     void Start()
     {
-        scene = SceneManager.GetActiveScene();
-
-        if(catchUp == null)
-        {
-            return;
-        }
         //new Score
         maxScore = Random.Range(minPoint, maxPoint);
 
@@ -125,16 +114,9 @@ public class player : MonoBehaviour
             go.GetComponent<TextMesh>().text = "+1";
             go.GetComponent<TextMesh>().color = Color.white;
 
-            StartCoroutine("showWin");
+            StartCoroutine(showWin());
             eating.Play();
-
-            if (scene.name == endlessScene)
-            {
-                catchUp.Gain_Slider.maxValue += 1;
-                catchUp.Gain_Slider.value += 1;
-                catchUp.amountToDeplete += catchUp.depleteValue;
-            }
-            
+            //isUgali = true;
         }
         //nyama +5
         else if(collision.CompareTag("Nyama"))
@@ -144,18 +126,13 @@ public class player : MonoBehaviour
             score = score + 5;
             scoretxt.text = "" + score;
 
-            StartCoroutine("showWin");
+            StartCoroutine(showWin());
             eating.Play();
 
             go.GetComponent<TextMesh>().text = "+5";
             go.GetComponent<TextMesh>().color = Color.white;
 
-            if (scene.name == endlessScene)
-            {
-                catchUp.Gain_Slider.maxValue += 5;
-                catchUp.Gain_Slider.value += 5;
-                catchUp.amountToDeplete += catchUp.depleteValue;
-            } 
+            //isMeat = true;
         }
         //chillie -1
         else if(collision.CompareTag("Chillie"))
@@ -168,14 +145,10 @@ public class player : MonoBehaviour
             go.GetComponent<TextMesh>().text = "-1";
             go.GetComponent<TextMesh>().color = Color.red;
 
-            StartCoroutine("showLose");
+            StartCoroutine(showLose());
             hotChillie.Play();
 
-            if (scene.name == endlessScene)
-            {
-                catchUp.Gain_Slider.maxValue -= 1;
-                catchUp.Gain_Slider.value -= 1;
-            }
+            //isChillie = true;
         }
         //mkorogo - instant kill - game over
         else if (collision.CompareTag("Mkorogo"))
@@ -183,21 +156,14 @@ public class player : MonoBehaviour
             isGameOver = true;
             go.GetComponent<TextMesh>().text = " ";
 
-            StartCoroutine("showLose");
+            StartCoroutine(showLose());
             vomit.Play();
-
-            if (scene.name == endlessScene)
-            {
-                catchUp.Gain_Slider.maxValue -= 5;
-                catchUp.Gain_Slider.value -= 5;
-            }
         }
         else
         {
             playerSprite.sprite = playerNormal;
         }
     }
-
     IEnumerator showWin()
     {
         yield return new WaitForSeconds(0);
@@ -219,7 +185,6 @@ public class player : MonoBehaviour
 
         playerSprite.sprite = playerNormal;
     }
-
     //score less than 1 then die
     public void ScoreDeath()
     {
