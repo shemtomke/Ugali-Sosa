@@ -735,6 +735,51 @@ RectTransform:
   m_AnchoredPosition: {x: -195, y: -252.5}
   m_SizeDelta: {x: 350, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &203301942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 203301944}
+  - component: {fileID: 203301943}
+  m_Layer: 0
+  m_Name: EnableCatchup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &203301943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203301942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd537b33a69410f468ee787839aac7ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  catchUp: {fileID: 334291813}
+  tutorialPoint: {fileID: 1809462001}
+--- !u!4 &203301944
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203301942}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.121174455, y: -0.78934854, z: 453.73328}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &207123632
 GameObject:
   m_ObjectHideFlags: 0
@@ -2310,7 +2355,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: DEATH!
+  m_Text: -5 Points
 --- !u!222 &428956902
 CanvasRenderer:
   m_ObjectHideFlags: 0

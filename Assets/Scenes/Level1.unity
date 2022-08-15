@@ -2877,6 +2877,9 @@ MonoBehaviour:
   fill: {fileID: 755426507}
   isGameOver: 0
   isMove: 0
+  isUgali: 0
+  isMeat: 0
+  isChillie: 0
 --- !u!50 &737601341
 Rigidbody2D:
   serializedVersion: 4
@@ -3272,7 +3275,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &857097939
 GameObject:
@@ -5539,7 +5542,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1637063234
 GameObject:
@@ -6722,7 +6725,7 @@ Transform:
   - {fileID: 707131979}
   - {fileID: 2095175244}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1914970364
 GameObject:
