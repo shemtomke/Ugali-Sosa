@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - AnchorGameObject
     - CameraViewportHandler
     - CatchUp
+    - EnableCatchUp
     - FloatingTxt
     - LevelManager
     - MoveToNextScene
@@ -20,8 +21,11 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -37,6 +41,9 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.Advertisements.dll:
+    - UnityEngine.Advertisements.Placeholder
+    - UnityEngine.Advertisements.Platform.Editor.BannerPlaceholder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -125,6 +132,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 4388}
     - Class: 114
       Script: {instanceID: 6002}
+    - Class: 114
+      Script: {instanceID: 110146}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -770,13 +779,13 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: ada6be231229e34a79489155c8e1214b
+      Hash: b60746e3b1da5ea179625a404dd609e5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TutorialPoint
   - hash:
       serializedVersion: 2
-      Hash: aa002d75161d3fcde7798b23b48f9777
+      Hash: 7a090c2920c4dd0b4cdfcaa890b2ee1e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: player
@@ -1052,7 +1061,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 690ad464d9cf085201671c0aa9fb3508
+      Hash: f92eff078bd5de5e53d1c19ea4a6272a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CatchUp
@@ -1344,6 +1353,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: a041175ab28fdc8709e57d5335d80eeb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnableCatchUp
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
@@ -1353,4 +1368,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level4.unity
   - Assets/Scenes/Level5.unity
   - Assets/Scenes/Endless Game.unity
-  playerPath: C:/Users/SHEM TOM/Downloads/Ugali Sosa.aab
+  playerPath: C:/Users/SHEM TOM/Documents/Ugali Sosa.aab
