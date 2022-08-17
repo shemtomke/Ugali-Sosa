@@ -24,15 +24,6 @@ public class CatchUp : MonoBehaviour
     {
         SliderDeplete();
         SliderRestrict();
-
-        if(tutorialPoint.barStart)
-        {
-            gameObject.GetComponent<CatchUp>().enabled = true;
-        }
-        else
-        {
-            gameObject.GetComponent<CatchUp>().enabled = false;
-        }
     }
     public void SliderDeplete()
     {
