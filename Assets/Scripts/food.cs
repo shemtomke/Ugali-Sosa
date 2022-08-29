@@ -7,19 +7,16 @@ public class food : MonoBehaviour
     //array of foods
     public GameObject[] foods;
     public float minValueX, maxValueX, yBound, timeForTutorial;
+    private float startDelay = 0.2f;
+    private float spawnInterval = 0.8f;
 
     private void OnEnable()
     {
-        StartCoroutine(FallingFood());
+        //StartCoroutine(FallingFood());
+        InvokeRepeating("SpawnRandomFood", startDelay, spawnInterval);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public IEnumerator FallingFood()
+    /*public IEnumerator FallingFood()
     {
         yield return new WaitForSeconds(Random.Range(0f, 2f));
 
@@ -30,5 +27,12 @@ public class food : MonoBehaviour
         GameObject gameObject = Instantiate(foods[randomFood], position, Quaternion.identity);
         
         StartCoroutine(FallingFood());
+    }*/
+
+    void SpawnRandomFood()
+    {
+        Vector2 spawnPos = new Vector2(Random.Range(minValueX, maxValueX), yBound);
+        int foodIndex = Random.Range(0, foods.Length);
+        Instantiate(foods[foodIndex], spawnPos, foods[foodIndex].transform.rotation);
     }
 }

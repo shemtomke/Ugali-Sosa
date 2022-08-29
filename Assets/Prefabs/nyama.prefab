@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3643029379227917802}
   - component: {fileID: 3643029379227917803}
-  - component: {fileID: 3643029379227917804}
   - component: {fileID: 3643029379227917805}
-  - component: {fileID: 3643029379227917806}
+  - component: {fileID: -6047157269545467293}
+  - component: {fileID: 5345138035894599928}
   m_Layer: 0
   m_Name: nyama
   m_TagString: Nyama
@@ -85,27 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &3643029379227917804
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3643029379227917807}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0.13
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!60 &3643029379227917805
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -508,7 +487,7 @@ PolygonCollider2D:
       - {x: 1.305, y: 0.505}
       - {x: 1.395, y: 0.575}
       - {x: 1.395, y: 0.745}
---- !u!114 &3643029379227917806
+--- !u!114 &-6047157269545467293
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -517,10 +496,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 3643029379227917807}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83fd2b9a316653544abf464eee3a848d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8324ed969410ae544b358641ee316ce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 3643029379227917804}
-  CurrentSpeed: 0
-  MaxSpeed: 3
-  speed: 0.5
+--- !u!114 &5345138035894599928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3643029379227917807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417ae997166a8ae4d8dbfbd6805ef1c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5

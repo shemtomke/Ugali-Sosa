@@ -63,16 +63,17 @@
     <Compile Include="Assets\Scripts\gameManager.cs" />
     <Compile Include="Assets\Scripts\food.cs" />
     <Compile Include="Assets\Scripts\Game Resolution\AnchorGameObject.cs" />
+    <Compile Include="Assets\Scripts\Endless\EnableCatchUp.cs" />
     <Compile Include="Assets\Scripts\levels.cs" />
     <Compile Include="Assets\Scripts\Level Manager Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Unity Ads\AdsInitializer.cs" />
-    <Compile Include="Assets\Scripts\foodDestroy.cs" />
     <Compile Include="Assets\Scripts\Level Manager Scripts\MoveToNextScene.cs" />
-    <Compile Include="Assets\Scripts\CatchUp.cs" />
+    <Compile Include="Assets\Scripts\Endless\CatchUp.cs" />
     <Compile Include="Assets\Scripts\Game Resolution\ScaleToFitScreen.cs" />
     <Compile Include="Assets\Scripts\Unity Ads\RewardAds.cs" />
-    <Compile Include="Assets\Scripts\menuManager.cs" />
-    <Compile Include="Assets\Scripts\EnableCatchUp.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\menuManager.cs" />
+    <Compile Include="Assets\Scripts\DestroyOutOfBounds.cs" />
+    <Compile Include="Assets\Scripts\MoveForward.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

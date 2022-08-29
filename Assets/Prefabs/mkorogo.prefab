@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6106430795166470098}
   - component: {fileID: 6106430795166470099}
-  - component: {fileID: 6106430795166470100}
-  - component: {fileID: 6106430795166470102}
   - component: {fileID: 21927150952543873}
+  - component: {fileID: -4319066792834779644}
+  - component: {fileID: -2628956596428259716}
   m_Layer: 0
   m_Name: mkorogo
   m_TagString: Mkorogo
@@ -85,43 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &6106430795166470100
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6106430795166470103}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0.2
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!114 &6106430795166470102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6106430795166470103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83fd2b9a316653544abf464eee3a848d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 6106430795166470100}
-  CurrentSpeed: 0
-  MaxSpeed: 3
-  speed: 0.5
 --- !u!60 &21927150952543873
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -316,3 +279,28 @@ PolygonCollider2D:
       - {x: 4.41, y: -1.79}
       - {x: 4.4, y: -1.7099999}
       - {x: 4.35, y: -1.67}
+--- !u!114 &-4319066792834779644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6106430795166470103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8324ed969410ae544b358641ee316ce9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2628956596428259716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6106430795166470103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417ae997166a8ae4d8dbfbd6805ef1c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7

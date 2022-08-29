@@ -25,7 +25,12 @@ public class player : MonoBehaviour
     public int maxScore, minPoint, maxPoint; //increase for new levels
     public int score = 1;
     public float speed;
-    public float xBound;
+
+    float xBound = 2.0f;
+    float yBound = 4.5f;
+
+    float horizontalInput, verticalInput;
+
     private Vector3 direction;
     private Vector3 touchPosition;
 
@@ -36,8 +41,7 @@ public class player : MonoBehaviour
 
     //move the player
     public bool isMove;
-
-    public bool isUgali = false, isMeat = false, isChillie = false;
+    bool isEndless;
 
     Rigidbody2D rb;
 
@@ -88,14 +92,26 @@ public class player : MonoBehaviour
 
         if(isMove)
         {
+            /*horizontalInput = Input.GetAxis("Horizontal");
+            verticalInput = Input.GetAxis("Vertical");
+
+            transform.Translate(Vector2.right * horizontalInput * Time.deltaTime * speed);
+            transform.Translate(Vector2.up * verticalInput * Time.deltaTime * speed);*/
+
             //wasd/arrow keys for standalone
-            float hmove = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-            transform.Translate(Vector3.right * hmove, Space.World);
+
+            horizontalInput = Input.GetAxis("Horizontal");
+            verticalInput = Input.GetAxis("Vertical");
+
+            transform.Translate(Vector2.right * horizontalInput * Time.deltaTime * speed);
+            transform.Translate(Vector2.up * verticalInput * Time.deltaTime * speed);
+            /*float hmove = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+            transform.Translate(Vector2.right * hmove, Space.World);*/
         }
         
 
         //make it bound to something //not make it go past the screen
-        transform.position = new Vector2(Mathf.Clamp(transform.position.x, -xBound, xBound), transform.position.y);
+        transform.position = new Vector2(Mathf.Clamp(transform.position.x, -xBound, xBound), Mathf.Clamp(transform.position.y, -yBound, yBound));
     }
 
     //how to acquire or get certain foods
@@ -116,7 +132,6 @@ public class player : MonoBehaviour
 
             StartCoroutine(showWin());
             eating.Play();
-            //isUgali = true;
         }
         //nyama +5
         else if(collision.CompareTag("Nyama"))
@@ -131,8 +146,6 @@ public class player : MonoBehaviour
 
             go.GetComponent<TextMesh>().text = "+5";
             go.GetComponent<TextMesh>().color = Color.white;
-
-            //isMeat = true;
         }
         //chillie -1
         else if(collision.CompareTag("Chillie"))
@@ -147,8 +160,6 @@ public class player : MonoBehaviour
 
             StartCoroutine(showLose());
             hotChillie.Play();
-
-            //isChillie = true;
         }
         //mkorogo - instant kill - game over
         else if (collision.CompareTag("Mkorogo"))
@@ -191,6 +202,8 @@ public class player : MonoBehaviour
         if(score < 1)
         {
             isGameOver = true;
+            //destroy or do not display the floating text
+            floatingTxt.SetActive(false);
         }
     }
 }

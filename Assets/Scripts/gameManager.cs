@@ -10,6 +10,7 @@ public class gameManager : MonoBehaviour
     public food food;
 
     public bool gameIsPaused;
+
     public GameObject GameOverScreen;
     public GameObject WinScreen;
     public GameObject pauseGameObject;
