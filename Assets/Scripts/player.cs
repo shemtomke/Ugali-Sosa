@@ -41,7 +41,6 @@ public class player : MonoBehaviour
 
     //move the player
     public bool isMove;
-    bool isEndless;
 
     Rigidbody2D rb;
 
@@ -71,7 +70,9 @@ public class player : MonoBehaviour
 
     public void Movement()
     {
-        if(isMove)
+        bool isYFrozen = (rb.constraints == RigidbodyConstraints2D.None);
+
+        if (isMove)
         {
             //touch point for android devices
             if (Input.touchCount > 0)
@@ -92,21 +93,17 @@ public class player : MonoBehaviour
 
         if(isMove)
         {
-            /*horizontalInput = Input.GetAxis("Horizontal");
-            verticalInput = Input.GetAxis("Vertical");
-
-            transform.Translate(Vector2.right * horizontalInput * Time.deltaTime * speed);
-            transform.Translate(Vector2.up * verticalInput * Time.deltaTime * speed);*/
-
             //wasd/arrow keys for standalone
-
             horizontalInput = Input.GetAxis("Horizontal");
             verticalInput = Input.GetAxis("Vertical");
 
             transform.Translate(Vector2.right * horizontalInput * Time.deltaTime * speed);
-            transform.Translate(Vector2.up * verticalInput * Time.deltaTime * speed);
-            /*float hmove = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-            transform.Translate(Vector2.right * hmove, Space.World);*/
+
+            //check if the y rigidbody constraint is markerd to move veertically
+            if(isYFrozen)
+            {
+                transform.Translate(Vector2.up * verticalInput * Time.deltaTime * speed);
+            }
         }
         
 
