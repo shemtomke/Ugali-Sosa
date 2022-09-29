@@ -1328,6 +1328,7 @@ MonoBehaviour:
   player: {fileID: 334291809}
   food: {fileID: 1463750892}
   gameIsPaused: 0
+  isLose: 0
   GameOverScreen: {fileID: 1715903061}
   WinScreen: {fileID: 1211341734}
   pauseGameObject: {fileID: 2120609975}
@@ -1518,7 +1519,7 @@ GameObject:
   - component: {fileID: 334291808}
   - component: {fileID: 334291813}
   m_Layer: 0
-  m_Name: 'Level_Player '
+  m_Name: Level_Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1569,6 +1570,7 @@ MonoBehaviour:
   vomit: {fileID: 429353261}
   eating: {fileID: 813110450}
   hotChillie: {fileID: 1602326564}
+  BgMusic: {fileID: 1545031619}
   floatingTxt: {fileID: 4250372113662171792, guid: 56ef180f017fe1a42b4f385f3813f116, type: 3}
   scoretxt: {fileID: 867057674}
   maxScoreTxt: {fileID: 1594174617}
@@ -1941,7 +1943,7 @@ RectTransform:
   - {fileID: 610554834}
   - {fileID: 2142315988}
   m_Father: {fileID: 1211341735}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4650,7 +4652,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1857487850}
-  - {fileID: 1897871843}
   - {fileID: 373420447}
   m_Father: {fileID: 701201354}
   m_RootOrder: 8
@@ -5890,7 +5891,7 @@ GameObject:
   - component: {fileID: 1545031618}
   - component: {fileID: 1545031619}
   m_Layer: 0
-  m_Name: OnClick Button
+  m_Name: Background Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5922,9 +5923,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.05
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -7404,7 +7405,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1897871843}
   m_Father: {fileID: 1211341735}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7476,17 +7478,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897871842}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1211341735}
-  m_RootOrder: 1
+  m_Father: {fileID: 1857487850}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -675}
-  m_SizeDelta: {x: 0, y: 80}
+  m_AnchoredPosition: {x: 0, y: -110}
+  m_SizeDelta: {x: 0, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1897871844
 MonoBehaviour:

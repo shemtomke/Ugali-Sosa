@@ -14,6 +14,7 @@ public class player : MonoBehaviour
 
     [Header("Player Audio")]
     public AudioSource vomit, eating, hotChillie;
+    public AudioSource BgMusic;
 
     [Header("Floating Effect UI")]
     public GameObject floatingTxt;
@@ -47,6 +48,7 @@ public class player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        BgMusic.Play();
         //new Score
         maxScore = Random.Range(minPoint, maxPoint);
 
@@ -66,6 +68,11 @@ public class player : MonoBehaviour
         ScoreDeath();
         Movement();
         slider.value = score;
+
+        if(isGameOver)
+        {
+            BgMusic.Stop();
+        }
     }
 
     public void Movement()

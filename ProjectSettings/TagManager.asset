@@ -9,6 +9,7 @@ TagManager:
   - Ugali
   - Mkorogo
   - Nyama
+  - FloatingText
   layers:
   - Default
   - TransparentFX
