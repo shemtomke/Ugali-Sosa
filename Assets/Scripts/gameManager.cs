@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class gameManager : MonoBehaviour
 {
-    public player player;
+    player _player;
     public food food;
 
     CatchUp catchUp;
@@ -16,8 +16,6 @@ public class gameManager : MonoBehaviour
     public GameObject GameOverScreen;
     public GameObject WinScreen;
     public GameObject pauseGameObject;
-
-    GameObject[] highlight;
 
     public Text leveltxt;
     public int Level = 1;
@@ -30,7 +28,7 @@ public class gameManager : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1;
-        highlight = GameObject.FindGameObjectsWithTag("FloatingText");
+        _player = GameObject.Find("Level_Player").GetComponent<player>();
         catchUp = GameObject.Find("Level_Player").GetComponent<CatchUp>();
     }
 
@@ -45,22 +43,17 @@ public class gameManager : MonoBehaviour
 
     public void GameOver()
     {
-        if(player.isGameOver)
+        if(_player.isGameOver)
         {
             pauseGameObject.SetActive(false);
             //show gameover screen
             GameOverScreen.SetActive(true);
             //stop food from falling
 
-            player.playerSprite.sprite = player.playerLose;
+            _player.playerSprite.sprite = _player.playerLose;
 
-            player.isMove = false;
+            _player.isMove = false;
             Time.timeScale = 0;
-
-            for (int i = 0; i < highlight.Length; i++)
-            {
-                highlight[i].SetActive(false);
-            }
         }
         else
         {
@@ -69,38 +62,41 @@ public class gameManager : MonoBehaviour
     }
     public void WinGame()
     {
-        if(player.score >= player.maxScore)
+        if(_player.score >= _player.maxScore)
         {
+            _player.BgMusic.Stop();
+
             pauseGameObject.SetActive(false);
 
             //win game 
             WinScreen.SetActive(true);
 
-            player.playerSprite.sprite = player.playerWin;
+            _player.playerSprite.sprite = _player.playerWin;
 
-            player.isMove = false;
+            _player.isMove = false;
             Time.timeScale = 0;
-
-            for (int i = 0; i < highlight.Length; i++)
-            {
-                highlight[i].SetActive(false);
-            }
         }
     }
 
-    public void ResumeOnRewardAds()
+    public void ResumeOnRewardAds() //level 1 to 5
     {
-        player.isGameOver = false;
-        player.isMove = true;
+        _player.isGameOver = false;
+        _player.isMove = true;
+        _player.BgMusic.Play();
+        Time.timeScale = 1;
+    }
+
+    public void ResumeInEndless() //endless
+    {
+        _player.isGameOver = false;
+        _player.isMove = true;
+        _player.BgMusic.Play();
         Time.timeScale = 1;
 
         //add some points to the endless scene
         catchUp.Gain_Slider.maxValue += 5;
         catchUp.Gain_Slider.value += 5;
         catchUp.amountToDeplete += catchUp.depleteValue;
-
-        //isLose = true;
-        //StartCoroutine(countdownAfterAds());
     }
 
     public IEnumerator countdownAfterAds()
@@ -111,7 +107,7 @@ public class gameManager : MonoBehaviour
             //countdown 3
             //is game over to false
             Debug.Log("3");
-            player.isGameOver = false;
+            _player.isGameOver = false;
 
             yield return new WaitForSeconds(1);
             //countdown 2
@@ -126,7 +122,7 @@ public class gameManager : MonoBehaviour
             Debug.Log("Resume");
             //move player
             //time scale to 1
-            player.isMove = true;
+            _player.isMove = true;
             Time.timeScale = 1;
             isLose = false;
         }

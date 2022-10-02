@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class RewardAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
@@ -63,8 +64,16 @@ public class RewardAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowList
         {
             Debug.Log("Unity Ads Rewarded Ad Completed");
             // Grant a reward.
+
             //deactivate the gameover, set isMove to true, isgameover to false
-            manager.ResumeOnRewardAds();
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Endless Game"))
+            {
+                manager.ResumeInEndless();
+            }
+            else
+            {
+                manager.ResumeOnRewardAds();
+            }
 
             // Load another ad:
             Advertisement.Load(_adUnitId, this);

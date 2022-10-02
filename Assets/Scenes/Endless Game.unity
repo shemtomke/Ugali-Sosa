@@ -1325,7 +1325,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72eff429256cbcb4487f25a597487a52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 334291809}
   food: {fileID: 1463750892}
   gameIsPaused: 0
   isLose: 0
@@ -5921,7 +5920,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 72124a769dfdb0247bb2292df77094d1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.05
   m_Pitch: 1
