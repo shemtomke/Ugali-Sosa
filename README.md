@@ -1,4 +1,4 @@
-# Ugali-Man
+# Ugali-Sosa
 
 A Uso Games & Shauku Games Collaboration.
 
